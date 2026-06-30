@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# VS Code
+.vscode/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Vim
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+
+# Office temporary files
+~$*.pptx
+~$*.ppt
+~$*.docx
+~$*.doc
+~$*.xlsx
+~$*.xls
+
+# PDF viewer temporary files
+*.synctex.gz
+
+# Logs
+*.log
