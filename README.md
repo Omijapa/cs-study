@@ -16,16 +16,16 @@
 
 ## 참고 자료
 
-- Ready For Tech Interview Repository
+- [Ready For Tech Interview Repository](https://github.com/WooVictory/Ready-For-Tech-Interview#2-computer-science)
 
 ## 일별 스터디 주제
 
-| Day | 주제 |
-|-----|------|
-| [Day 1](./day1/README.md) | 선택 정렬, 버블 정렬, 병합 정렬, 삽입 정렬 |
-| [Day 2](./day2/README.md) | 퀵 정렬, 힙 정렬 |
-| [Day 3](./day3/README.md) | 투 포인터 알고리즘 |
-| [Day 4](./day4/README.md) | 순열 |
-| [Day 5](./day5/README.md) | DFS/BFS |
+| Day                       | 주제                                              |
+| ------------------------- | ------------------------------------------------- |
+| [Day 1](./day1/README.md) | 선택 정렬, 버블 정렬, 병합 정렬, 삽입 정렬        |
+| [Day 2](./day2/README.md) | 퀵 정렬, 힙 정렬                                  |
+| [Day 3](./day3/README.md) | 투 포인터 알고리즘                                |
+| [Day 4](./day4/README.md) | 순열                                              |
+| [Day 5](./day5/README.md) | DFS/BFS                                           |
 | [Day 6](./day6/README.md) | 이분 탐색(Binary Search), 최대공약수와 최소공배수 |
-| [Day 7](./day7/README.md) | LRU Cache |
+| [Day 7](./day7/README.md) | LRU Cache                                         |
