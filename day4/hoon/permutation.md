@@ -173,5 +173,40 @@ def permutation_swap_unique(arr, k):
 arr = [1, 1, 2]
 permutation_swap_unique(arr, 3)
 ```
+```python
+def permutation_visited_unique(arr, k):
+    visited = [False] * len(arr)
+    path = []
+
+    def backtrack(depth):
+        if depth == k:
+            print(path)
+            return
+
+        used = set()  # 현재 depth에서 이미 선택한 값들
+
+        for i in range(len(arr)):
+            if visited[i]:
+                continue
+
+            if arr[i] in used:
+                continue
+
+            used.add(arr[i])
+
+            visited[i] = True
+            path.append(arr[i])
+
+            backtrack(depth + 1)
+
+            path.pop()
+            visited[i] = False
+
+    backtrack(0)
+
+
+arr = [1, 1, 2]
+permutation_visited_unique(arr, 3)
+```
 
 - 재귀는 항상 이해하기 쉽지 않구려..
