@@ -36,7 +36,7 @@ class Main {
 		return -1;
 	}
 
-	public static main(String args[]) {
+	public static void main(String args[]) {
 		int arr[] = { 2, 3, 4, 10, 40};
 		int x = 10;
 		int result = binarySearch(arr, x);
@@ -89,7 +89,7 @@ class Main {
 		return -1;
 	}
 
-	public static main(String args[]) {
+	public static void main(String args[]) {
 		int arr[] = { 2, 3, 4, 10, 40};
 		int x = 10;
 		int result = binarySearch(arr, 0, arr.length - 1, x);
