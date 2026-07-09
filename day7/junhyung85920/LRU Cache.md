@@ -30,7 +30,7 @@ Status: Done
 
 # 구현
 
-### Python (OrderedDict는 해시 맵에 이중 연결 리스트가 내정되어 있음 → 순서 보장)
+### Python (OrderedDict는 해시 맵에 이중 연결 리스트가 내장되어 있음 → 순서 보장)
 
 ```python
 from collections import OrderedDict
