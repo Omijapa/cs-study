@@ -29,3 +29,11 @@
 | [Day 5](./day5/README.md) | DFS/BFS                                           |
 | [Day 6](./day6/README.md) | 이분 탐색(Binary Search), 최대공약수와 최소공배수 |
 | [Day 7](./day7/README.md) | LRU Cache                                         |
+| [Day 8](./day8/README.md) | 운영체제란, 컴퓨터 시스템의 동작 원리            |
+| [Day 9](./day9/README.md) | Process vs Thread, Context Switching              |
+| [Day 10](./day10/README.md) | 동기화 문제, 교착 상태(Dead lock)               |
+| [Day 11](./day11/README.md) | 인터럽트(Interrupt), 시스템 콜(System Call)     |
+| [Day 12](./day12/README.md) | CPU 스케줄링, 스케줄러의 종류                  |
+| [Day 13](./day13/README.md) | 동기 vs 비동기, 페이징 & 세그멘테이션          |
+| [Day 14](./day14/README.md) | 페이지 교체 알고리즘, 단편화                   |
+| [Day 15](./day15/README.md) | IPC(Inter Process Communication), 메모리, 캐시의 지역성 |
