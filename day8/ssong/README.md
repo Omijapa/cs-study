@@ -85,15 +85,53 @@
 
 데이터를 안전하게 저장하고 사용자가 원할 때 그 정보를 에러 없이 복구할 수 있음을 보장해준다.
 
-## CPU와 I/O 연산
+---
 
-입출력 장치들의 I/O 연산은 I/O 컨트롤러가 담당하고 컴퓨터 내에 수행되는 연산은 메인 CPU가 담당한다.
+# 컴퓨터 시스템
 
-Local Buffer는 하드웨어 내부에 있으며 하드웨어와 주고 받는 데이터를 임시로 저장하기 위한 작은 메모리이다.
+![image1.png](./image1.png)
 
-Interrupt는 I/O 컨트롤러들이 CPU의 서비스가 필요할 때 통보하는 방법으로 CPU가 작업을 하던 중 인터럽트 라인에 신호가 들어오면 해당 인터럽트를 처리한다.
+### 1. Mode Bit
 
-## 메모리 구조
+운영 체제는 듀얼 모드로 수행된다. Mode Bit가 0이면 커널 모드, Mode Bit가 1이면 유저 모드이다. 이렇게 두 개의 모드로 분리하는 이유는 OS와 다른 시스템 구성 요소들을 잘못되거나 불법적인 프로그램 실행으로부터 보호하기 위함이다. (유저 프로그램이 실수로 OS 파일을 날리는 경우 방지)
+
+### 2. Timer
+
+타이머의 주 역할은 특정 시간이 지난 후 CPU를 인터럽트하는 것이다. (Timer Interrupt)
+
+이를 통해 유저 프로그램이 CPU를 독점하는 것을 방지하고 Time Sharing System을 구축하는데 사용된다.
+
+![image2.png](./image2.png)
+
+### 3. I/O Device
+
+I/O Device Controller가 컴퓨터와 I/O 장치들 사이를 인터페이싱한다. Local Buffer(like memory)를 통해 하드웨어와 주고 받는 데이터를 임시로 저장한다.
+
+I/O 과정이 끝나면 device controller가 CPU에게 interrupt 신호를 보내고, CPU는 이 신호를 수신하면 해당 인터럽트를 처리한다.
+
+### 4. Exception (Interrupt)
+
+![image3.png](./image3.png)
+
+인터럽트는 CPU가 실행 중인 작업을 멈추고 운영체제의 인터럽트 핸들러에게 제어권을 넘기도록 하는 것이다.
+
+종류로는 Interrupt, Traps, Faults, Aborts가 있고 이 중 Interrupt만 외부 장치로부터 발생하고 나머지는 CPU에 의해 발생한다.
+
+각각에 대한 상세한 설명은 추후 Interrupt 섹션에서 다루겠다.
+
+### 5. DMA (Direct Memory Access)
+
+![image4.png](./image4.png)
+
+DMA는 외부 I/O 장치들이 CPU의 개입 없이 메모리와 직접 데이터를 주고 받을 수 있게 해준다.
+
+(원래는 메모리는 CPU만 접근 가능, DMA가 예외)
+
+→ I/O 장치의 Interrupt를 줄여 성능을 높인다.
+
+---
+
++) 메모리 구조
 
 ![](https://velog.velcdn.com/images/kkyes1210/post/4826b576-d98d-458b-a303-cb81ff136ccd/image.png)
 
