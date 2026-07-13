@@ -67,6 +67,24 @@
   - 성능 저하
   - 설계 및 개발의 복잡성
 
+## 운영 체제의 3가지 주요 기능
+
+### 1. Virtualization
+
+사용자에게 마치 무한한 resource를 가지고 있는 듯한 Illusion을 제공한다.
+
+실제로는 CPU가 1개지만 Time Sharing을 통해 여러 개의 CPU가 있는 듯하게 보여준다. (Time Sharing)
+
+메모리의 경우에도 마치 각 프로세스가 독립적인 가장 주소 공간을 가지고 있는 듯한 Illusion을 제공한다. (Logical Memory)
+
+### 2. Concurrency
+
+하나의 메모리에 대해 경쟁 조건(Race Condition)을 concurrency로 회피한다.
+
+### 3. Persistence
+
+데이터를 안전하게 저장하고 사용자가 원할 때 그 정보를 에러 없이 복구할 수 있음을 보장해준다.
+
 ## CPU와 I/O 연산
 
 입출력 장치들의 I/O 연산은 I/O 컨트롤러가 담당하고 컴퓨터 내에 수행되는 연산은 메인 CPU가 담당한다.
