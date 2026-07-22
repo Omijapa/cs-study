@@ -43,3 +43,5 @@
 
 3. 세트-어소시에이티브 매핑(Set-Associative Mapping)
 - 직접 매핑과 연관 매핑의 장점만을 취한 방식.
+
+[출처](https://chelseashin.tistory.com/43)
