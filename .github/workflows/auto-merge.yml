@@ -1,0 +1,85 @@
+name: Auto Merge After 48 Hours
+
+on:
+  schedule:
+    # 매일 오후 10시 (KST)
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Merge eligible PRs
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            const { data: prs } = await github.rest.pulls.list({
+              owner,
+              repo,
+              state: "open",
+              per_page: 100,
+            });
+
+            const now = new Date();
+
+            for (const pr of prs) {
+              console.log(`Checking PR #${pr.number}`);
+
+              // Draft PR 제외
+              if (pr.draft) {
+                console.log(" - Draft PR");
+                continue;
+              }
+
+              // PR 생성 후 경과 시간 확인
+              const createdAt = new Date(pr.created_at);
+              const hoursSinceOpened =
+                (now - createdAt) / (1000 * 60 * 60);
+
+              if (hoursSinceOpened < 48) {
+                console.log(
+                  ` - Opened ${hoursSinceOpened.toFixed(1)} hours ago`
+                );
+                continue;
+              }
+
+              // PR 상세 조회
+              const { data: detail } = await github.rest.pulls.get({
+                owner,
+                repo,
+                pull_number: pr.number,
+              });
+
+              // GitHub Branch Protection / Rules 모두 만족해야 함
+              if (detail.mergeable_state !== "clean") {
+                console.log(
+                  ` - mergeable_state: ${detail.mergeable_state}`
+                );
+                continue;
+              }
+
+              try {
+                await github.rest.pulls.merge({
+                  owner,
+                  repo,
+                  pull_number: pr.number,
+                  merge_method: "squash",
+                });
+
+                console.log(`✅ Merged PR #${pr.number}`);
+              } catch (error) {
+                console.log(
+                  `❌ Failed to merge PR #${pr.number}: ${error.message}`
+                );
+              }
+            }
