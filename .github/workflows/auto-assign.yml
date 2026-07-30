@@ -16,7 +16,7 @@ jobs:
         with:
           script: |
             const author = context.payload.pull_request.user.login;
-            const all = ['yeapy', 'junhyung85920', 'jhssong'];
+            const all = ['yeapy', 'junhyung85920', 'jhssong', 'makisepel'];
             const reviewers = all.filter(u => u !== author);
 
             await github.rest.issues.addAssignees({
