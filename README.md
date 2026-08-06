@@ -47,3 +47,8 @@
 | [Day 23](./day23/README.md) | Naver를 치면 일어나는 과정                              |
 | [Day 24](./day24/README.md) | 로드밸런싱                                              |
 | [Day 25](./day25/README.md) | Stateful vs Stateless                                   |
+| [Day 26](./day26/README.md) | Array vs ArrayList vs LinkedList                        |
+| [Day 27](./day27/README.md) | Stack과 Queue, Hash                                     |
+| [Day 28](./day28/README.md) | Tree와 Heap                                             |
+| [Day 29](./day29/README.md) | B Tree & B+Tree                                         |
+| [Day 30](./day30/README.md) | 이진 탐색 트리, Trie 자료 구조                          |
