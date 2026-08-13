@@ -52,3 +52,13 @@
 | [Day 28](./day28/README.md) | Tree와 Heap                                             |
 | [Day 29](./day29/README.md) | B Tree & B+Tree                                         |
 | [Day 30](./day30/README.md) | 이진 탐색 트리, Trie 자료 구조                          |
+| [Day 31](./day31/README.md) | 파일 시스템                                             |
+| [Day 32](./day32/README.md) | 정규화, 저장 프로시저                                   |
+| [Day 33](./day33/README.md) | 레디스                                                  |
+| [Day 34](./day34/README.md) | 계수 정렬                                               |
+| [Day 35](./day35/README.md) | 해시 테이블                                             |
+| [Day 36](./day36/README.md) | LIS                                                     |
+| [Day 37](./day37/README.md) | LCA                                                     |
+| [Day 38](./day38/README.md) | DP                                                      |
+| [Day 39](./day39/README.md) | 다익스트라, 벨만포드                                    |
+| [Day 40](./day40/README.md) | 비트마스크                                              |
