@@ -17,6 +17,7 @@
 ## 참고 자료
 
 - [Ready For Tech Interview Repository](https://github.com/WooVictory/Ready-For-Tech-Interview#2-computer-science)
+- [tech-interview-for-developer](https://github.com/gyoogle/tech-interview-for-developer)
 
 ## 일별 스터디 주제
 
